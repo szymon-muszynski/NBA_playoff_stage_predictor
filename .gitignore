@@ -1,0 +1,35 @@
+# =========================
+# PYTHON & FASTAPI
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv/
+env/
+
+# =========================
+# FRONTEND (NODE / REACT)
+# =========================
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# =========================
+# JUPYTER NOTEBOOKS
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# EDYTORY I SYSTEM
+# =========================
+.vscode/
+.DS_Store
+Thumbs.db
+
+# =========================
+# DANE (Opcjonalnie)
+# =========================
+# Odznacz poniższe, jeśli Twoje pliki CSV są ogromne i nie chcesz ich w Gicie
+# *.csv
