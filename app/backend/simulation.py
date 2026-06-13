@@ -30,20 +30,41 @@ def simulate_single_match(home_team_win_chance: float) -> bool:
     return random.random() < home_team_win_chance
 
 
-def simulate_single_series(home_team, away_team, season):
+def simulate_single_series(home_team: str, away_team: str, season: str, df_stats:pd.DataFrame, models_dict: dict) -> str:
     
     home_team_score = 0
     away_team_score = 0
-    
-    home_team_win_chance = get_home_team_win_chance(home_team, away_team, season)
+    game_number = 1
     
     while True:
-        if simulate_single_match(home_team_win_chance):
-            home_team_score+=1
+        
+        if game_number in [1,2,5,7]:
+            current_host = home_team
+            current_guest = away_team
         else:
-            away_team_score+=1
-            
+            current_host = away_team
+            current_guest = home_team
+        
+        host_team_win_chance = get_home_team_win_chance(current_host, current_guest, season, df_stats, models_dict)
+        
+        current_host_win = simulate_single_match(host_team_win_chance)
+        
+        if current_host_win:
+            if current_host == home_team:
+                home_team_score += 1
+            else:
+                away_team_score += 1
+        else:
+            if current_guest == home_team:
+                home_team_score += 1
+            else:
+                away_team_score += 1
+                
+        print(f"Gra {game_number}: {home_team} - {home_team_score}:{away_team_score} {away_team}")        
+        
         if home_team_score == 4:
             return home_team
         elif away_team_score == 4:
             return away_team
+        
+        game_number += 1
