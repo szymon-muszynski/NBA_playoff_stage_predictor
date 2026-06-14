@@ -68,3 +68,6 @@ def simulate_single_series(home_team: str, away_team: str, season: str, df_stats
             return away_team
         
         game_number += 1
+        
+def simulate_whole_playoffs(playoff_pairs, season) -> str:
+    pass
