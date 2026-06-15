@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Request, HTTPException
+from fastapi import APIRouter, Request, HTTPException, Depends
 
 from schemas import SeriesSimulationRequest, SeriesSimulationResponse
 from simulation import simulate_single_series
@@ -9,17 +9,20 @@ router = APIRouter(prefix="/api/simulations", tags=["Symulacje NBA"])
 def get_message():
     return {"message": "Cześć! Tu backend w FastAPI!"}
 
+#Tworzysz funkcję "Dostawcę", która wyciąga to, co trzeba z Requesta
+def get_ml_models(request: Request):
+     return request.app.state.models_dict
+
+def get_stats(request: Request):
+    return request.app.state.df_stats
+
 # Główny endpoint do symulacji pojedynczej serii
 @router.post("/api/simulate_series", response_model=SeriesSimulationResponse)
-def simulate_series(payload: SeriesSimulationRequest, request: Request):
+def simulate_series(payload: SeriesSimulationRequest, prediction_models = Depends(get_ml_models), season_stats = Depends(get_stats)):
     """
     Endpoint przyjmuje JSONa w formacie SeriesSimulationRequest, 
     wyciąga modele z RAMu i deleguje obliczenia do simulation.py.
     """
-    
-    # Wyciągamy załadowane przy starcie dane z app.state
-    df_stats = request.app.state.df_stats
-    models_dict = request.app.state.models_dict
     
     try:
         # Odpalamy Twoją funkcję!
@@ -27,8 +30,8 @@ def simulate_series(payload: SeriesSimulationRequest, request: Request):
             home_team=payload.home_team,
             away_team=payload.away_team,
             season=payload.season,
-            df_stats=df_stats,
-            models_dict=models_dict
+            df_stats=season_stats,
+            models_dict=prediction_models
         )
         
         # Formujemy i zwracamy odpowiedź zgodną z naszym schematem
