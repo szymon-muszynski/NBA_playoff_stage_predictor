@@ -1,31 +1,26 @@
 # 🏀 NBA Playoff Predictor
 
-A full-stack Machine Learning application for simulating and predicting NBA Playoff series outcomes based on historical team performance and advanced regular-season statistics.
+Aplikacja full-stack wykorzystująca Machine Learning do przewidywania wyników serii Playoff NBA na podstawie historycznych danych i statystyk drużynowych z sezonu zasadniczego.
 
-The project combines predictive analytics, backend API development, and modern frontend technologies to create an interactive playoff simulation platform.
-
----
-
-## Overview
-
-The application uses machine learning models trained on NBA historical data to estimate the probability of teams winning playoff series.
-
-Users can select teams, simulate matchups, and explore playoff outcomes through a web interface powered by a FastAPI backend and a React frontend.
-
-### Current Features
-
-* NBA playoff series simulation (Best-of-7)
-* Home-court advantage modeling
-* Team statistics aggregation from multiple NBA seasons
-* REST API built with FastAPI
-* React + TypeScript frontend
-* Modular architecture following Separation of Concerns principles
-* Dependency Injection and request validation
-* Machine Learning model persistence using Joblib
+Projekt łączy analitykę sportową, uczenie maszynowe oraz nowoczesne technologie webowe, umożliwiając symulowanie pojedynczych serii playoffowych oraz — w kolejnych etapach rozwoju — całych drabinek Playoff NBA.
 
 ---
 
-## Tech Stack
+## 📖 Opis projektu
+
+Celem projektu jest stworzenie systemu, który na podstawie danych historycznych potrafi oszacować prawdopodobieństwo zwycięstwa drużyny w serii playoffowej.
+
+Aplikacja składa się z:
+
+* backendu opartego o FastAPI,
+* frontendu stworzonego w React + TypeScript,
+* warstwy Machine Learning wykorzystującej modele trenowane na danych NBA z lat 2010–2024.
+
+Obecnie użytkownik może symulować pojedyncze serie Playoff NBA w formacie Best-of-7.
+
+---
+
+## 🛠️ Stos technologiczny
 
 ### Backend
 
@@ -46,13 +41,13 @@ Users can select teams, simulate matchups, and explore playoff outcomes through 
 
 ### Machine Learning
 
-* Logistic Regression
-* Feature Scaling
-* Historical NBA Team Statistics (2010–2024)
+* Regresja Logistyczna
+* Skalowanie cech (Feature Scaling)
+* Historyczne statystyki drużyn NBA (2010–2024)
 
 ---
 
-## Architecture
+## 🏗️ Architektura
 
 ```text
 Frontend (React + TypeScript)
@@ -61,126 +56,96 @@ Frontend (React + TypeScript)
       FastAPI REST API
             │
             ▼
-   Simulation Service Layer
+      Warstwa Serwisów
             │
             ▼
-   Machine Learning Models
+      Silnik Symulacji
             │
             ▼
- Historical NBA Dataset
+     Modele ML + Dane
 ```
 
-### Backend Design
-
-The backend follows a layered architecture:
+Backend został zaprojektowany zgodnie z zasadą Separation of Concerns:
 
 ```text
-API Layer (Routers)
-        │
-        ▼
-Business Logic Layer
-        │
-        ▼
-Prediction / Simulation Engine
-        │
-        ▼
-Data & Model Layer
+Warstwa API (Routery)
+          │
+          ▼
+    Logika Biznesowa
+          │
+          ▼
+ Silnik Predykcji / Symulacji
+          │
+          ▼
+      Dane i Modele
 ```
 
-Key architectural decisions:
+Zastosowane rozwiązania:
 
-* Dependency Injection using FastAPI `Depends`
-* Pydantic request/response validation
-* Model loading during application startup
-* Clear separation between API, business logic, and ML components
-* Stateless REST endpoints
+* Dependency Injection (`Depends`)
+* Walidacja danych przez Pydantic
+* Ładowanie modeli przy starcie aplikacji
+* Rozdzielenie logiki API od logiki biznesowej
+* Architektura modułowa ułatwiająca dalszy rozwój projektu
 
 ---
 
-## Project Structure
-
-```text
-project-root/
-│
-├── backend/
-│   ├── routers/
-│   ├── services/
-│   ├── data/
-│   ├── models/
-│   ├── main.py
-│   └── requirements.txt
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── services/
-│   │   ├── types/
-│   │   └── App.tsx
-│   │
-│   ├── package.json
-│   └── vite.config.ts
-│
-└── README.md
-```
-
----
-
-## Local Development Setup
+## 🚀 Uruchomienie projektu lokalnie
 
 ### Backend
 
-Navigate to the backend directory:
+Przejdź do katalogu backendu:
 
 ```bash
 cd backend
 ```
 
-Create a virtual environment:
+Utwórz środowisko wirtualne:
 
 ```bash
 python -m venv venv
 ```
 
-Activate it:
+Aktywuj środowisko:
 
-Mac/Linux:
+**Mac/Linux**
 
 ```bash
 source venv/bin/activate
 ```
 
-Windows:
+**Windows**
 
 ```bash
 venv\Scripts\activate
 ```
 
-Install dependencies:
+Zainstaluj wymagane biblioteki:
 
 ```bash
 pip install fastapi uvicorn pandas scikit-learn pydantic joblib
 ```
 
-Ensure the following files exist inside `backend/data/`:
+Upewnij się, że w katalogu `backend/data/` znajdują się:
 
 ```text
 models_by_season.joblib
 regular_season_stats_from_2010-11_to_2023-24.csv
 ```
 
-Run the API:
+Uruchom serwer:
 
 ```bash
 uvicorn main:app --reload
 ```
 
-Backend URL:
+Backend będzie dostępny pod adresem:
 
 ```text
 http://localhost:8000
 ```
 
-Swagger Documentation:
+Dokumentacja API (Swagger):
 
 ```text
 http://localhost:8000/docs
@@ -190,25 +155,25 @@ http://localhost:8000/docs
 
 ### Frontend
 
-Open a new terminal:
+Otwórz nowe okno terminala:
 
 ```bash
 cd frontend
 ```
 
-Install dependencies:
+Zainstaluj zależności:
 
 ```bash
 npm install
 ```
 
-Start the development server:
+Uruchom aplikację:
 
 ```bash
 npm run dev
 ```
 
-Frontend URL:
+Frontend będzie dostępny pod adresem:
 
 ```text
 http://localhost:5173
@@ -216,93 +181,94 @@ http://localhost:5173
 
 ---
 
-## Machine Learning Approach
+## 🤖 Podejście Machine Learning
 
-### Current Model
+### Aktualna wersja modelu
 
-The current implementation uses:
+Obecnie aplikacja wykorzystuje:
 
-* Logistic Regression
-* Team-level season statistics
-* Home-court advantage metrics
-* Historical playoff outcomes
+* Regresję Logistyczną
+* Statystyki drużynowe z sezonu zasadniczego
+* Wskaźniki przewagi własnego parkietu
+* Historyczne wyniki Playoff NBA
 
-Separate models are trained for each NBA season to better capture season-specific trends and league dynamics.
+Modele trenowane są osobno dla każdego sezonu, co pozwala lepiej odwzorować specyfikę danego okresu i zmiany zachodzące w lidze.
 
-### Simulation Logic
+### Logika symulacji
 
-The prediction engine simulates playoff series using:
+Silnik symulacyjny uwzględnia:
 
-* Best-of-7 format
-* Official NBA home-court structure (2-2-1-1-1)
-* Team win probabilities generated by trained models
-
----
-
-## Roadmap
-
-### Phase 1 — Foundation ✅
-
-* Historical dataset preparation
-* Feature engineering
-* Logistic Regression training
-* Model serialization
-* FastAPI backend
-* React frontend
-* Single-series simulation
-
-### Phase 2 — Playoff Bracket Simulation 🚧
-
-* [ ] Full playoff bracket simulation
-* [ ] Automatic progression through all playoff rounds
-* [ ] Conference Finals simulation
-* [ ] NBA Finals simulation
-
-### Phase 3 — Advanced Analytics 🚧
-
-* [ ] XGBoost implementation
-* [ ] Team momentum metrics
-* [ ] Recent-form indicators
-* [ ] Additional advanced statistics
-* [ ] Feature importance analysis
-
-### Phase 4 — Platform Features 🚧
-
-* [ ] Interactive playoff bracket UI
-* [ ] Database integration (PostgreSQL)
-* [ ] User-generated simulations
-* [ ] Saved simulation history
-* [ ] Deployment to cloud infrastructure
+* format Best-of-7,
+* oficjalny układ meczów NBA (2-2-1-1-1),
+* przewagę własnego parkietu,
+* prawdopodobieństwa generowane przez modele ML.
 
 ---
 
-## Future Improvements
+## 📈 Roadmap
 
-Potential enhancements include:
+### Faza 1 — Fundamenty ✅
 
-* XGBoost and ensemble models
-* Monte Carlo simulations
-* Team injury impact modeling
-* ELO rating integration
-* Real-time NBA API integration
-* User authentication and accounts
-* Cloud deployment (Docker + AWS/Azure)
+* Przygotowanie zbioru danych
+* Inżynieria cech
+* Trening modeli ML
+* Serializacja modeli
+* Backend FastAPI
+* Frontend React
+* Symulacja pojedynczej serii
+
+### Faza 2 — Symulacja całej drabinki 🚧
+
+* [ ] Symulacja pełnych Playoffów NBA
+* [ ] Automatyczne generowanie kolejnych rund
+* [ ] Finały Konferencji
+* [ ] Finały NBA
+
+### Faza 3 — Zaawansowane ML 🚧
+
+* [ ] Implementacja XGBoost
+* [ ] Wskaźnik Momentum
+* [ ] Analiza ostatnich meczów sezonu
+* [ ] Rozszerzony zestaw cech
+* [ ] Analiza ważności cech
+
+### Faza 4 — Rozbudowa platformy 🚧
+
+* [ ] Interaktywna wizualizacja drabinki
+* [ ] Integracja z PostgreSQL
+* [ ] Zapisywanie symulacji użytkowników
+* [ ] Historia symulacji
+* [ ] Wdrożenie do chmury
 
 ---
 
-## Learning Goals
+## 🔮 Możliwe kierunki rozwoju
 
-This project was built to deepen practical experience in:
+* XGBoost i modele zespołowe
+* Symulacje Monte Carlo
+* Uwzględnianie kontuzji zawodników
+* Integracja systemu ELO
+* Integracja z publicznym API NBA
+* Konta użytkowników
+* Konteneryzacja przy użyciu Dockera
+* Deployment do AWS, Azure lub Railway
+
+---
+
+## 🎯 Cele projektu
+
+Projekt powstał w celu rozwijania praktycznych umiejętności z zakresu:
 
 * Machine Learning Engineering
-* Full-Stack Development
-* REST API Design
-* Software Architecture
-* Data Engineering
-* Sports Analytics
+* Data Science
+* Programowania Backendowego
+* Programowania Frontendowego
+* Projektowania REST API
+* Architektury oprogramowania
+* Analityki sportowej
 
 ---
 
-## License
+## 📄 Licencja
 
-This project is intended for educational and portfolio purposes.
+Projekt tworzony w celach edukacyjnych oraz portfolio programistycznego.
