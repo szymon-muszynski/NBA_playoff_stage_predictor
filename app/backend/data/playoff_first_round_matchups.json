@@ -1,0 +1,198 @@
+{
+  "2010-11": {
+    "Eastern": [
+      {"team_a": "CHI", "seed_a": 1, "team_b": "IND", "seed_b": 8},
+      {"team_a": "ORL", "seed_a": 4, "team_b": "ATL", "seed_b": 5},
+      {"team_a": "MIA", "seed_a": 2, "team_b": "PHI", "seed_b": 7},
+      {"team_a": "BOS", "seed_a": 3, "team_b": "NYK", "seed_b": 6}
+    ],
+    "Western": [
+      {"team_a": "SAS", "seed_a": 1, "team_b": "MEM", "seed_b": 8},
+      {"team_a": "OKC", "seed_a": 4, "team_b": "DEN", "seed_b": 5},
+      {"team_a": "LAL", "seed_a": 2, "team_b": "NOH", "seed_b": 7},
+      {"team_a": "DAL", "seed_a": 3, "team_b": "POR", "seed_b": 6}
+    ]
+  },
+  "2011-12": {
+    "Eastern": [
+      {"team_a": "CHI", "seed_a": 1, "team_b": "PHI", "seed_b": 8},
+      {"team_a": "BOS", "seed_a": 4, "team_b": "ATL", "seed_b": 5},
+      {"team_a": "MIA", "seed_a": 2, "team_b": "NYK", "seed_b": 7},
+      {"team_a": "IND", "seed_a": 3, "team_b": "ORL", "seed_b": 6}
+    ],
+    "Western": [
+      {"team_a": "SAS", "seed_a": 1, "team_b": "UTA", "seed_b": 8},
+      {"team_a": "MEM", "seed_a": 4, "team_b": "LAC", "seed_b": 5},
+      {"team_a": "OKC", "seed_a": 2, "team_b": "DAL", "seed_b": 7},
+      {"team_a": "LAL", "seed_a": 3, "team_b": "DEN", "seed_b": 6}
+    ]
+  },
+  "2012-13": {
+    "Eastern": [
+      {"team_a": "MIA", "seed_a": 1, "team_b": "MIL", "seed_b": 8},
+      {"team_a": "BKN", "seed_a": 4, "team_b": "CHI", "seed_b": 5},
+      {"team_a": "NYK", "seed_a": 2, "team_b": "BOS", "seed_b": 7},
+      {"team_a": "IND", "seed_a": 3, "team_b": "ATL", "seed_b": 6}
+    ],
+    "Western": [
+      {"team_a": "OKC", "seed_a": 1, "team_b": "HOU", "seed_b": 8},
+      {"team_a": "LAC", "seed_a": 4, "team_b": "MEM", "seed_b": 5},
+      {"team_a": "SAS", "seed_a": 2, "team_b": "LAL", "seed_b": 7},
+      {"team_a": "DEN", "seed_a": 3, "team_b": "GSW", "seed_b": 6}
+    ]
+  },
+  "2013-14": {
+    "Eastern": [
+      {"team_a": "IND", "seed_a": 1, "team_b": "ATL", "seed_b": 8},
+      {"team_a": "CHI", "seed_a": 4, "team_b": "WAS", "seed_b": 5},
+      {"team_a": "MIA", "seed_a": 2, "team_b": "CHA", "seed_b": 7},
+      {"team_a": "TOR", "seed_a": 3, "team_b": "BKN", "seed_b": 6}
+    ],
+    "Western": [
+      {"team_a": "SAS", "seed_a": 1, "team_b": "DAL", "seed_b": 8},
+      {"team_a": "HOU", "seed_a": 4, "team_b": "POR", "seed_b": 5},
+      {"team_a": "OKC", "seed_a": 2, "team_b": "MEM", "seed_b": 7},
+      {"team_a": "LAC", "seed_a": 3, "team_b": "GSW", "seed_b": 6}
+    ]
+  },
+  "2014-15": {
+    "Eastern": [
+      {"team_a": "ATL", "seed_a": 1, "team_b": "BKN", "seed_b": 8},
+      {"team_a": "TOR", "seed_a": 4, "team_b": "WAS", "seed_b": 5},
+      {"team_a": "CLE", "seed_a": 2, "team_b": "BOS", "seed_b": 7},
+      {"team_a": "CHI", "seed_a": 3, "team_b": "MIL", "seed_b": 6}
+    ],
+    "Western": [
+      {"team_a": "GSW", "seed_a": 1, "team_b": "NOP", "seed_b": 8},
+      {"team_a": "POR", "seed_a": 4, "team_b": "MEM", "seed_b": 5},
+      {"team_a": "HOU", "seed_a": 2, "team_b": "DAL", "seed_b": 7},
+      {"team_a": "LAC", "seed_a": 3, "team_b": "SAS", "seed_b": 6}
+    ]
+  },
+  "2015-16": {
+    "Eastern": [
+      {"team_a": "CLE", "seed_a": 1, "team_b": "DET", "seed_b": 8},
+      {"team_a": "ATL", "seed_a": 4, "team_b": "BOS", "seed_b": 5},
+      {"team_a": "TOR", "seed_a": 2, "team_b": "IND", "seed_b": 7},
+      {"team_a": "MIA", "seed_a": 3, "team_b": "CHA", "seed_b": 6}
+    ],
+    "Western": [
+      {"team_a": "GSW", "seed_a": 1, "team_b": "HOU", "seed_b": 8},
+      {"team_a": "LAC", "seed_a": 4, "team_b": "POR", "seed_b": 5},
+      {"team_a": "SAS", "seed_a": 2, "team_b": "MEM", "seed_b": 7},
+      {"team_a": "OKC", "seed_a": 3, "team_b": "DAL", "seed_b": 6}
+    ]
+  },
+  "2016-17": {
+    "Eastern": [
+      {"team_a": "BOS", "seed_a": 1, "team_b": "CHI", "seed_b": 8},
+      {"team_a": "WAS", "seed_a": 4, "team_b": "ATL", "seed_b": 5},
+      {"team_a": "CLE", "seed_a": 2, "team_b": "IND", "seed_b": 7},
+      {"team_a": "TOR", "seed_a": 3, "team_b": "MIL", "seed_b": 6}
+    ],
+    "Western": [
+      {"team_a": "GSW", "seed_a": 1, "team_b": "POR", "seed_b": 8},
+      {"team_a": "LAC", "seed_a": 4, "team_b": "UTA", "seed_b": 5},
+      {"team_a": "SAS", "seed_a": 2, "team_b": "MEM", "seed_b": 7},
+      {"team_a": "HOU", "seed_a": 3, "team_b": "OKC", "seed_b": 6}
+    ]
+  },
+  "2017-18": {
+    "Eastern": [
+      {"team_a": "TOR", "seed_a": 1, "team_b": "WAS", "seed_b": 8},
+      {"team_a": "CLE", "seed_a": 4, "team_b": "IND", "seed_b": 5},
+      {"team_a": "BOS", "seed_a": 2, "team_b": "MIL", "seed_b": 7},
+      {"team_a": "PHI", "seed_a": 3, "team_b": "MIA", "seed_b": 6}
+    ],
+    "Western": [
+      {"team_a": "HOU", "seed_a": 1, "team_b": "MIN", "seed_b": 8},
+      {"team_a": "OKC", "seed_a": 4, "team_b": "UTA", "seed_b": 5},
+      {"team_a": "GSW", "seed_a": 2, "team_b": "SAS", "seed_b": 7},
+      {"team_a": "POR", "seed_a": 3, "team_b": "NOP", "seed_b": 6}
+    ]
+  },
+  "2018-19": {
+    "Eastern": [
+      {"team_a": "MIL", "seed_a": 1, "team_b": "DET", "seed_b": 8},
+      {"team_a": "BOS", "seed_a": 4, "team_b": "IND", "seed_b": 5},
+      {"team_a": "TOR", "seed_a": 2, "team_b": "ORL", "seed_b": 7},
+      {"team_a": "PHI", "seed_a": 3, "team_b": "BKN", "seed_b": 6}
+    ],
+    "Western": [
+      {"team_a": "GSW", "seed_a": 1, "team_b": "LAC", "seed_b": 8},
+      {"team_a": "HOU", "seed_a": 4, "team_b": "UTA", "seed_b": 5},
+      {"team_a": "DEN", "seed_a": 2, "team_b": "SAS", "seed_b": 7},
+      {"team_a": "POR", "seed_a": 3, "team_b": "OKC", "seed_b": 6}
+    ]
+  },
+  "2019-20": {
+    "Eastern": [
+      {"team_a": "MIL", "seed_a": 1, "team_b": "ORL", "seed_b": 8},
+      {"team_a": "IND", "seed_a": 4, "team_b": "MIA", "seed_b": 5},
+      {"team_a": "TOR", "seed_a": 2, "team_b": "BKN", "seed_b": 7},
+      {"team_a": "BOS", "seed_a": 3, "team_b": "PHI", "seed_b": 6}
+    ],
+    "Western": [
+      {"team_a": "LAL", "seed_a": 1, "team_b": "POR", "seed_b": 8},
+      {"team_a": "HOU", "seed_a": 4, "team_b": "OKC", "seed_b": 5},
+      {"team_a": "LAC", "seed_a": 2, "team_b": "DAL", "seed_b": 7},
+      {"team_a": "DEN", "seed_a": 3, "team_b": "UTA", "seed_b": 6}
+    ]
+  },
+  "2020-21": {
+    "Eastern": [
+      {"team_a": "PHI", "seed_a": 1, "team_b": "WAS", "seed_b": 8},
+      {"team_a": "NYK", "seed_a": 4, "team_b": "ATL", "seed_b": 5},
+      {"team_a": "BKN", "seed_a": 2, "team_b": "BOS", "seed_b": 7},
+      {"team_a": "MIL", "seed_a": 3, "team_b": "MIA", "seed_b": 6}
+    ],
+    "Western": [
+      {"team_a": "UTA", "seed_a": 1, "team_b": "MEM", "seed_b": 8},
+      {"team_a": "LAC", "seed_a": 4, "team_b": "DAL", "seed_b": 5},
+      {"team_a": "PHX", "seed_a": 2, "team_b": "LAL", "seed_b": 7},
+      {"team_a": "DEN", "seed_a": 3, "team_b": "POR", "seed_b": 6}
+    ]
+  },
+  "2021-22": {
+    "Eastern": [
+      {"team_a": "MIA", "seed_a": 1, "team_b": "ATL", "seed_b": 8},
+      {"team_a": "PHI", "seed_a": 4, "team_b": "TOR", "seed_b": 5},
+      {"team_a": "BOS", "seed_a": 2, "team_b": "BKN", "seed_b": 7},
+      {"team_a": "MIL", "seed_a": 3, "team_b": "CHI", "seed_b": 6}
+    ],
+    "Western": [
+      {"team_a": "PHX", "seed_a": 1, "team_b": "NOP", "seed_b": 8},
+      {"team_a": "DAL", "seed_a": 4, "team_b": "UTA", "seed_b": 5},
+      {"team_a": "MEM", "seed_a": 2, "team_b": "MIN", "seed_b": 7},
+      {"team_a": "GSW", "seed_a": 3, "team_b": "DEN", "seed_b": 6}
+    ]
+  },
+  "2022-23": {
+    "Eastern": [
+      {"team_a": "MIL", "seed_a": 1, "team_b": "MIA", "seed_b": 8},
+      {"team_a": "CLE", "seed_a": 4, "team_b": "NYK", "seed_b": 5},
+      {"team_a": "BOS", "seed_a": 2, "team_b": "ATL", "seed_b": 7},
+      {"team_a": "PHI", "seed_a": 3, "team_b": "BKN", "seed_b": 6}
+    ],
+    "Western": [
+      {"team_a": "DEN", "seed_a": 1, "team_b": "MIN", "seed_b": 8},
+      {"team_a": "PHX", "seed_a": 4, "team_b": "LAC", "seed_b": 5},
+      {"team_a": "MEM", "seed_a": 2, "team_b": "LAL", "seed_b": 7},
+      {"team_a": "SAC", "seed_a": 3, "team_b": "GSW", "seed_b": 6}
+    ]
+  },
+  "2023-24": {
+    "Eastern": [
+      {"team_a": "BOS", "seed_a": 1, "team_b": "MIA", "seed_b": 8},
+      {"team_a": "CLE", "seed_a": 4, "team_b": "ORL", "seed_b": 5},
+      {"team_a": "NYK", "seed_a": 2, "team_b": "PHI", "seed_b": 7},
+      {"team_a": "MIL", "seed_a": 3, "team_b": "IND", "seed_b": 6}
+    ],
+    "Western": [
+      {"team_a": "OKC", "seed_a": 1, "team_b": "NOP", "seed_b": 8},
+      {"team_a": "LAC", "seed_a": 4, "team_b": "DAL", "seed_b": 5},
+      {"team_a": "DEN", "seed_a": 2, "team_b": "LAL", "seed_b": 7},
+      {"team_a": "MIN", "seed_a": 3, "team_b": "PHX", "seed_b": 6}
+    ]
+  }
+}
