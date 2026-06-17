@@ -1,28 +1,24 @@
 import { useState } from 'react';
 import './App.css';
-import { SimulationForm } from './components/SimulationForm';
-import { SimulationResult } from './components/SimulationResult';
-import { simulateSeries } from './api/simulations';
-import { SeriesSimulationRequest, SeriesSimulationResponse } from './types';
+import { PlayoffForm } from './components/PlayoffForm';
+import { PlayoffBracket } from './components/PlayoffBracket';
+import { simulatePlayoffs } from './api/simulations';
+import { PlayoffSimulationResponse } from './types';
 
 function App() {
-  // Stany aplikacji
-  const [result, setResult] = useState<SeriesSimulationResponse | null>(null);
+  const [result, setResult] = useState<PlayoffSimulationResponse | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Funkcja wywoływana, gdy formularz zostanie wysłany
-  const handleSimulationSubmit = async (requestData: SeriesSimulationRequest) => {
+  const handleSimulationSubmit = async (season: string) => {
     setLoading(true);
     setError(null);
     setResult(null);
 
     try {
-      // Wołamy nasz serwis API
-      const data = await simulateSeries(requestData);
+      const data = await simulatePlayoffs({ season });
       setResult(data);
     } catch (err: any) {
-      // Wyłapujemy błąd (np. brak statystyk drużyny) i ustawiamy go w stanie
       setError(err.message);
     } finally {
       setLoading(false);
@@ -31,21 +27,18 @@ function App() {
 
   return (
     <div className="App" style={{ textAlign: 'center', padding: '20px' }}>
-      <h1>NBA Playoff Simulator</h1>
-      <p>Podaj drużyny i sprawdź, kto wygra serię!</p>
+      <h1>🏀 NBA Playoff Simulator</h1>
       
-      {/* Nasz komponent formularza */}
-      <SimulationForm onSubmit={handleSimulationSubmit} isLoading={loading} />
+      <PlayoffForm onSubmit={handleSimulationSubmit} isLoading={loading} />
 
-      {/* Komunikat o błędzie */}
       {error && (
-        <div style={{ color: 'red', marginTop: '20px' }}>
+        <div style={{ color: 'red', margin: '20px' }}>
           <strong>Błąd:</strong> {error}
         </div>
       )}
 
-      {/* Nasz komponent z wynikiem */}
-      <SimulationResult result={result} />
+      {/* Rysowanie drabinki */}
+      <PlayoffBracket data={result} />
     </div>
   );
 }

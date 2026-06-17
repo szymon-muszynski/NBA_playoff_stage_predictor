@@ -1,42 +1,150 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* =========================================
+   1. UKŁAD GŁÓWNY DRABINKI (FLEXBOX)
+   ========================================= */
+.bracket-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 20px 0;
+  min-width: 1000px; /* To wymusza, żeby drabinka się nie zwijała w pionie! */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.conference-side {
+  display: flex;
+  gap: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.round-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.finals-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
 }
 
-.card {
-  padding: 2em;
+.champion-box {
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: #ffd700;
+  color: black;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
 }
 
-.read-the-docs {
-  color: #888;
+/* =========================================
+   2. KARTY POJEDYNKÓW (PROSTOKĄTY)
+   ========================================= */
+.matchup-card {
+  border: 2px solid #333;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: white;
+  min-width: 130px;
+  font-family: monospace;
+  font-size: 1.1em;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+/* Efekt najechania myszką */
+.matchup-card:hover {
+  transform: scale(1.05);
+  border-color: #4CAF50;
+}
+
+.team-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid #444;
+}
+
+.team-row:last-child {
+  border-bottom: none;
+}
+
+.team-row.winner {
+  font-weight: bold;
+  background-color: #2e7d32;
+  color: white;
+}
+
+/* =========================================
+   3. WYSKAKUJĄCE OKIENKO (MODAL)
+   ========================================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #242424;
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 30px;
+  min-width: 350px;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+  color: white;
+  text-align: left;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: white;
+}
+
+.series-history ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.series-history li {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  background-color: #333;
+  border-left: 5px solid transparent;
+}
+
+.series-history li.team-a-win {
+  border-left-color: #2196F3;
+}
+
+.series-history li.team-b-win {
+  border-left-color: #f44336;
 }
