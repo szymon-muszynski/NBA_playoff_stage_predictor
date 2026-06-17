@@ -25,7 +25,7 @@ def simulate_series(payload: SeriesSimulationRequest, prediction_models = Depend
     """
     
     try:
-        winner = simulate_single_series(
+        winner, _ = simulate_single_series(
             home_team=payload.home_team,
             away_team=payload.away_team,
             season=payload.season,
