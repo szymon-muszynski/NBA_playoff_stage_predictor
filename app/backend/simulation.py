@@ -333,20 +333,20 @@ import joblib
 import json
 from pathlib import Path
 
-# 1. Ten krok automatycznie namierzy folder 'backend' na Twoim dysku
-BASE_DIR = Path(__file__).resolve().parent
+# # 1. Ten krok automatycznie namierzy folder 'backend' na Twoim dysku
+# BASE_DIR = Path(__file__).resolve().parent
 
-# 2. Sklejamy dokładne ścieżki do plików
-STATS_PATH = BASE_DIR / "data" / "regular_season_stats_from_2010-11_to_2023-24.csv"
-MODELS_PATH = BASE_DIR / "data" / "models_by_season.joblib"
-MATCHUPS_PATH = BASE_DIR / "data" / "playoff_first_round_matchups.json"
+# # 2. Sklejamy dokładne ścieżki do plików
+# STATS_PATH = BASE_DIR / "data" / "regular_season_stats_from_2010-11_to_2023-24.csv"
+# MODELS_PATH = BASE_DIR / "data" / "models_by_season.joblib"
+# MATCHUPS_PATH = BASE_DIR / "data" / "playoff_first_round_matchups.json"
 
-# 3. Wczytujemy pliki używając naszych absolutnych ścieżek
-df_stats = pd.read_csv(STATS_PATH)
-models_dict = joblib.load(MODELS_PATH)
+# # 3. Wczytujemy pliki używając naszych absolutnych ścieżek
+# df_stats = pd.read_csv(STATS_PATH)
+# models_dict = joblib.load(MODELS_PATH)
 
-with open(MATCHUPS_PATH, 'r') as f:
-    matchups = json.load(f)
-result = simulate_whole_playoffs(matchups, "2014-15", df_stats, models_dict)
+# with open(MATCHUPS_PATH, 'r') as f:
+#     matchups = json.load(f)
+# result = simulate_whole_playoffs(matchups, "2014-15", df_stats, models_dict)
 
-print(result)
+# print(result)
