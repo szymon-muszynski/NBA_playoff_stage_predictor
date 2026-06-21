@@ -4,6 +4,10 @@ Aplikacja full-stack wykorzystująca Machine Learning do przewidywania wyników 
 
 Pierwsza wersja aplikacji jest funkcjonalna i pozwala na symulację pełnej drabinki turniejowej. Projekt łączy analitykę sportową, uczenie maszynowe oraz technologie webowe. Planowana jest dalsza rozbudowa systemu o nowe modele predykcyjne wraz z możliwością ich wyboru z poziomu interfejsu użytkownika.
 
+<img width="1439" height="766" alt="image" src="https://github.com/user-attachments/assets/90f304d0-07e6-4084-80fc-f4e4e8e435e4" />
+<img width="1439" height="766" alt="image" src="https://github.com/user-attachments/assets/01599821-df30-4f51-9ea3-9721b2dd11cc" />
+
+
 ## 📖 Opis projektu
 
 Celem projektu jest stworzenie systemu, który na podstawie danych historycznych potrafi oszacować prawdopodobieństwo zwycięstwa drużyny w poszczególnych meczach i wygenerować realistyczny przebieg całego turnieju.
