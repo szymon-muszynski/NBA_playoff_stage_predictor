@@ -31,6 +31,27 @@ function App() {
       
       <PlayoffForm onSubmit={handleSimulationSubmit} isLoading={loading} />
 
+      {loading && (
+        <div style={{
+          marginTop: '20px',
+          padding: '15px',
+          backgroundColor: '#2a2a2a',
+          borderLeft: '4px solid #646cff',
+          borderRadius: '8px',
+          color: '#e0e0e0',
+          maxWidth: '550px',
+          margin: '20px auto',
+          textAlign: 'left'
+        }}>
+          <p style={{ margin: '0 0 8px 0', fontWeight: '500', fontSize: '1.1em', color: '#646cff' }}>
+            ⏳ Trwa symulacja, proszę czekać...
+          </p>
+          <p style={{ margin: 0, fontSize: '0.9em', color: '#aaa', lineHeight: '1.4' }}>
+            <strong>Uwaga:</strong> Strona korzysta z darmowego serwera. Jeśli to pierwsza symulacja od dłuższego czasu, serwer musi się wybudzić, co może zająć <strong>około minuty</strong>. Każda kolejna symulacja zajmie mniej!
+          </p>
+        </div>
+      )}
+
       {error && (
         <div style={{ color: 'red', margin: '20px' }}>
           <strong>Błąd:</strong> {error}
