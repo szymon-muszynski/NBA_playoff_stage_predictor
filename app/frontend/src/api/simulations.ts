@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { SeriesSimulationRequest, SeriesSimulationResponse, PlayoffSimulationRequest, PlayoffSimulationResponse } from '../types';
 
-const API_BASE_URL = 'http://localhost:8000/api/simulations';
+const API_BASE_URL = 'https://nba-playoff-stage-predictor.onrender.com/api/simulations';
 
 export const simulateSeries = async (data: SeriesSimulationRequest): Promise<SeriesSimulationResponse> => {
   try {
