@@ -1,5 +1,7 @@
 # 🏀 NBA Playoff Predictor
 
+**🌐 Live Demo: [Kliknij tutaj, aby przetestować aplikację na żywo!](https://nba-playoff-stage-predictor-nd77.onrender.com/)**
+
 Aplikacja full-stack wykorzystująca Machine Learning do przewidywania wyników całych Playoffów NBA na podstawie historycznych danych i statystyk drużynowych z odpowiedniego sezonu zasadniczego.
 
 Pierwsza wersja aplikacji jest funkcjonalna i pozwala na symulację pełnej drabinki turniejowej. Projekt łączy analitykę sportową, uczenie maszynowe oraz technologie webowe. Planowana jest dalsza rozbudowa systemu o nowe modele predykcyjne wraz z możliwością ich wyboru z poziomu interfejsu użytkownika.
